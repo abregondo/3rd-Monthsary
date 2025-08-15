@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy 3rd Monthsary, bb!</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .photo {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        width: 30%; /* 3 columns */
+        max-width: 300px; /* bigger than before */
+        height: 300px; /* also increased height */
+        border-radius: 15px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        transition: transform 0.2s;
+    }
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+        display: block;
+    }
+    .photo .overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        font-size: 1.2em;
+        transition: opacity 0.3s;
+        padding: 20px;
+        text-align: center;
+    }
+    .photo:hover img,
+    .photo:active img {
+        transform: scale(1.15);
+    }
+    .photo:hover .overlay,
+    .photo:active .overlay {
+        opacity: 1;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Happy 3rd Monthsary, bb! 💚</h1>
+        <p class="message">This may be random, pero gusto lang gyud nako ipaabot nimo nga bisan unsang oras, 
+            akong gugma para nimo tinuod ug way pagduha-duha. I love you endlessly, bb. You're my home, my peace, and my patutunguhan. 💖</p>
+
+        <div class="gallery">
+            <div class="photo">
+                <img src="images/pic1.jpg" alt="Photo 1">
+                <div class="overlay">In every moment, I choose to love and cherish you deeper than yesterday. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic2.jpg" alt="Photo 2">
+                <div class="overlay">No distance, no doubt—my heart is yours, steadfast and unwavering. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic3.jpg" alt="Photo 3">
+                <div class="overlay">You are my safe place, my forever promise, my greatest certainty.</div>
+            </div>
+            <div class="photo">
+                <img src="images/pic4.jpg" alt="Photo 4">
+                <div class="overlay">I will hold you close through every storm, every joy, every tomorrow. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic5.jpg" alt="Photo 5">
+                <div class="overlay">My love will never falter. You are my always, my assurance in this world. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic6.jpg" alt="Photo 6">
+                <div class="overlay">With you, I have found my forever—my heart’s true home. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic7.jpg" alt="Photo 7">
+                <div class="overlay">You are never alone. my love surrounds you, now and always. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic8.jpg" alt="Photo 8">
+                <div class="overlay">I vow to love, assure, and stand by you for all the days of our lives. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic9.jpg" alt="Photo 9">
+                <div class="overlay">Every smile with you is a memory I treasure forever. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic10.jpg" alt="Photo 10">
+                <div class="overlay">Thank you for being my constant source of happiness. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic11.jpg" alt="Photo 11">
+                <div class="overlay">With you, every day feels special and meaningful. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic12.jpg" alt="Photo 12">
+                <div class="overlay">Your love gives me strength and courage every single day. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic13.jpg" alt="Photo 13">
+                <div class="overlay">I am grateful for every moment we share together. </div>
+            </div>
+            
+            <div class="photo">
+                <img src="images/pic14.jpg" alt="Photo 14">
+                <div class="overlay">Forever starts and ends with you, my bebuu. </div>
+            </div>
+            <div class="photo">
+                <img src="images/pic15.jpg" alt="Photo 15">
+                <div class="overlay">Here’s to more adventures and memories together! </div>
+            </div>
+            </div>
+        </div>
+        <p class="kakyl">- Your Forever kakyl 💚</p>
+
+     <audio id="bgMusic" loop>
+  <source src="music/ikaw.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  // Play background music as soon as page loads
+  window.addEventListener("load", () => {
+    const audio = document.getElementById("bgMusic");
+
+    // Try to play immediately (may fail on some browsers)
+    const playAttempt = audio.play();
+
+    // If autoplay is blocked, wait for user interaction
+    if (playAttempt !== undefined) {
+      playAttempt
+        .then(() => {
+          console.log("Autoplay started!");
+        })
+        .catch(() => {
+          document.addEventListener("click", () => {
+            audio.play();
+          }, { once: true });
+        });
+    }
+  });
+</script>
+
+</body>
+</html>
